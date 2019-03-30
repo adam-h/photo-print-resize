@@ -1,9 +1,8 @@
 # Requirements
 
- - Python (2 or 3)
-  - Tested on v2.7 and v3.5
+ - Python3
  - Wand (python binding)
-  - `pip install Wand` or `pip3 install Wand`
+  -  `pip3 install Wand`
  - Imagick
   - Tested on v6.9.4-8
   - Must be in your path, specifically the `convert` binary
@@ -13,7 +12,7 @@
 Size all images in "test" directory to 4R / 4x6 size (default), outputting
 processed files to "processed" directory
 
-    python resize.py --input test --output processed
+    python3 resize.py --input test --output processed
 
 ## Options
 
@@ -30,4 +29,4 @@ processed files to "processed" directory
 
 Full example:
 
-    python resize.py --input test --output processed --ratio 1.5 --color red --gravity center
+    python3 resize.py --input test --output processed --ratio 1.5 --color red --gravity center
