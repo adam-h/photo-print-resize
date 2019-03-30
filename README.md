@@ -1,9 +1,9 @@
 # Requirements
 
- - Python3
- - Wand (python binding)
+- Python3
+- Wand (python binding)
   -  `pip3 install Wand`
- - Imagick
+- Imagick
   - Tested on v6.9.4-8
   - Must be in your path, specifically the `convert` binary
 
