@@ -6,6 +6,7 @@ import glob
 import argparse
 from wand.image import Image
 from subprocess import call
+from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', help='Input directory', required=True)
@@ -18,6 +19,10 @@ args = parser.parse_args()
 extensions = ('png', 'gif', 'jpg', 'jpeg')
 image_paths = []
 ratio = int(100 * args.ratio)
+
+print(f'Resizing files from {args.input} to {args.output}')
+
+Path(args.output).mkdir(parents=True, exist_ok=True)
 
 for extension in extensions:
     image_paths.extend(glob.glob(os.path.join(args.input, '*.' + extension)))
@@ -34,4 +39,7 @@ for input_path in image_paths:
         else:
             extent = '100%x' + str(ratio) + '%'
 
+        print('.', end = '', flush = True)
         call(['convert', input_path, '-gravity', args.gravity, '-background', args.color, '-extent', extent, output_path])
+
+print('\ndone')
