@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 extensions = ('png', 'gif', 'jpg', 'jpeg')
 image_paths = []
-ratio = int(100 * args.ratio)
+ratio = int(100 * float(args.ratio))
 
 print(f'Resizing files from {args.input} to {args.output}')
 
@@ -32,7 +32,6 @@ for input_path in image_paths:
         output_path = os.path.join(args.output, os.path.basename(input_path))
         w = img.width
         h = img.height
-        ratio = int(100 * args.ratio)
 
         if w < h:
             extent = str(ratio) + '%x100%'
