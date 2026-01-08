@@ -1,8 +1,6 @@
 # Requirements
 
-- Python3
-- Wand (python binding)
-  -  `pip3 install Wand`
+- Python3 & pipx
 - Imagick
   - Tested on v6.9.4-8
   - Must be in your path, specifically the `convert` binary
@@ -12,7 +10,7 @@
 Size all images in "test" directory to 4R / 4x6 size (default), outputting
 processed files to "processed" directory
 
-    python3 resize.py --input test --output processed
+    pipx run resize.py --input test --output processed
 
 ## Options
 

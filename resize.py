@@ -1,4 +1,9 @@
 #!/bin/env python3
+# /// script
+# dependencies = [
+#   "Wand",
+# ]
+# ///
 
 from __future__ import print_function
 import os
