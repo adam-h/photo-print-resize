@@ -1,6 +1,6 @@
 # Requirements
 
-- Python3 & pipx
+- Python 3 & pipx
 - Imagick
   - Tested on v7
   - Must be in your path, specifically the `magick` binary
@@ -27,4 +27,4 @@ processed files to "processed" directory
 
 Full example:
 
-    python3 resize.py --input test --output processed --ratio 1.5 --color red --gravity center
+    pipx run resize.py --input test --output processed --ratio 1.5 --color red --gravity center
