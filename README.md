@@ -2,8 +2,8 @@
 
 - Python3 & pipx
 - Imagick
-  - Tested on v6.9.4-8
-  - Must be in your path, specifically the `convert` binary
+  - Tested on v7
+  - Must be in your path, specifically the `magick` binary
 
 # Usage
 

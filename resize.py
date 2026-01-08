@@ -44,6 +44,7 @@ for input_path in image_paths:
             extent = '100%x' + str(ratio) + '%'
 
         print('.', end = '', flush = True)
-        call(['convert', input_path, '-gravity', args.gravity, '-background', args.color, '-extent', extent, output_path])
+        
+        call(['magick', input_path, '-gravity', args.gravity, '-background', args.color, '-extent', extent, output_path])
 
 print('\ndone')
